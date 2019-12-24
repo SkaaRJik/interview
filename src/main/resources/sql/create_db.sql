@@ -1,0 +1,5 @@
+CREATE DATABASE interview;
+
+CREATE USER interviewer WITH ENCRYPTED PASSWORD 'interview';
+GRANT ALL PRIVILEGES ON DATABASE interview TO interviewer;
+

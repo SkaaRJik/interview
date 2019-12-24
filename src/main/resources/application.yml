@@ -1,0 +1,29 @@
+
+server:
+  port: 9000
+spring:
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/interview
+    username: interviewer
+    password: interview
+    driverClassName: org.postgresql.Driver
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+  freemarker:
+    expose-request-attributes: true
+  jpa:
+    generate-ddl: true
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+      database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+
+loger:
+  level:
+    root: INFO
+
+
